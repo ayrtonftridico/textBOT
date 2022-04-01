@@ -1,9 +1,10 @@
 const Discord = require('discord.js');
+require('dotenv').config()
 const { Client, Intents } = require('discord.js');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
-const TOKEN = 'OTU5NDMwMjc3MTQ1NDMyMTI0.YkbxEw.9WcfxD_uNm09w2gGnkK8-JfHb8c';
+const TOKEN = process.env.DISCORDKEY;
 
 client.on("ready", () => {
     console.log('textBOT online!');
